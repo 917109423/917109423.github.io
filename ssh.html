@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html>
 
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+
+	</head>
+	<body>
+		
+			域名:<input type="" name="" id="dns" value="" placeholder="请输入群晖域名"/><br/>
+			ip地址:<input type="" name="" id="ip" value="" placeholder="请输入IP地址" /><br/>
+			端口号:<input type="" name="" id="port" value="" placeholder="请输入端口号" /><br/>
+			<button onclick="success()">提交</button><button>取消</button>
+			
+	
+		
+	</body>
+	<script type="text/javascript">
+		let dns = document.querySelector('#dns')
+		let ip = document.querySelector('#ip')
+		let port = document.querySelector('#port')
+		
+		
+		function success(){
+			console.log(dns.value,ip.value,port.value)
+//			console.log('');
+//			http.get("http://www.baidu.com")
+			window.location.href="http://"+dns.value+":2222/"+"ssh/host/"+ip.value+"?port="+port.value;
+//''
+		}
+		
+		
+	</script>
+
+</html>
